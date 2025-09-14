@@ -1,0 +1,62 @@
+# Cuando declaras una variable o un método como estático, pertenece a la clase, en lugar de a una instancia específica. Esto significa que solo existe una instancia de un miembro estático , incluso si creas múltiples objetos de la clase, o si no creas ninguno. Será compartido por todos los objetos.
+
+Ejemplo:
+
+public class Counter{
+	public static int COUNT=0;
+	Counter(){
+		Count++;
+	}
+}
+
+# La variable COUNT será compartida por todos los objetos de esa clase.
+
+Ahora, podemos crear objetos de nuestra clase Counter en main, y acceder a la variable estática.
+
+Ejemplo:
+
+public class Counter{
+	public static int COUNT=0;
+	Counter(){
+		COUNT++;
+	}
+}
+
+public class MyClass{
+	public static void main(String [] args){
+		Counter c1 = new Counter():
+		Counter c2 = new Counter():
+		System.out.prinln(Counter.COUNT);
+	}
+}
+
+# La salida es 2, porque la variable COUNT es estática y se incrementa en uno cada vez que se crea un nuevo objeto de la clase Counter. En el código anterior, creamos 2 objetos.
+
+También puedes acceder a la variable estática utilizando cualquier objeto de esa clase, como c1.COUNT.
+
+# El mismo concepto se aplica a los métodos static.
+
+Ejemplo:
+
+public class Vehicle {
+  public static void horn() {
+    System.out.println("Beep");
+  }
+}
+
+# Ahora, el método horn puede ser llamado sin crear un objeto:
+
+public class Vehicle{
+	public static void horn(){
+		System.out.println("Beep");
+	}
+}
+
+public class MyClass{
+	public static void main(String[] args){
+		Vehicle.horn();
+	}
+}
+
+# Otro ejemplo de métodos estáticos son aquellos de la clase Math , razón por la cual puedes llamarlos sin crear un objeto Math .
+
