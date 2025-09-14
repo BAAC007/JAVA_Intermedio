@@ -1,0 +1,14 @@
+#Usa la palabra clave final para marcar una variable como constante, de modo que solo se le pueda asignar una vez.
+
+Ejemplo:
+
+class MyClass{
+	public static final double PI = 3.14;
+	public static void main(String[] args){
+		System.out.println(PI);
+	}
+}
+
+#PI ahora es una constante. Cualquier intento de asignarle un valor causará un error.
+
+ 

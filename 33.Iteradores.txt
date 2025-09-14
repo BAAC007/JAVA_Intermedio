@@ -1,0 +1,62 @@
+#Un Iterador es un objeto que permite recorrer una colección, obtener o eliminar elementos. 
+
+Antes de que puedas acceder a una colección a través de un iterador, debes obtener uno. Cada una de las clases de colección proporciona un método <b>iterator()</b> que devuelve un iterador al inicio de la colección. Usando este objeto iterador, puedes acceder a cada elemento en la colección, un elemento a la vez.
+
+La clase Iterador proporciona los siguientes métodos:
+
+<b>hasNext()</b>: Devuelve true si hay al menos un elemento más; de lo contrario, devuelve false.
+
+<b>next()</b>: Devuelve el siguiente objeto y avanza el iterador.
+
+<b>remove()</b>: Elimina el último objeto que fue devuelto por next de la colección.
+
+La clase Iterador debe ser importada del paquete java.util.
+
+Ejemplo:
+
+import java.util.Iteractor;
+import java.util.LinkedList;
+
+public class MyStorm{
+	public static void main(String[] args){
+		LinkedList<String> animals = new LinkeList<String>();
+		animals.add("Fox");
+		animals.add("Cat");
+		animals.add("Dog");
+		animals.add("Rabbit");
+		
+		Iterator<String> it = new Iterator<String>();
+		String value = it.next();
+		System.out.pritnln(value);
+	}
+}
+
+#<b>it.next()</b> devuelve el primer elemento de la lista y luego mueve el iterador al siguiente elemento.
+
+Cada vez que llamas a <b>it.next()</b>, el iterador se mueve al siguiente elemento de la lista.
+
+#Normalmente, los iteradores se utilizan en bucles. En cada iteración del bucle, puedes acceder al elemento correspondiente de la lista.
+
+Ejemplo:
+
+import java.util.Iteractor;
+import java.util.LinkedList;
+
+public class MyStorm{
+	public static void main(String[] args){
+		LinkedList<String> animals = new LinkeList<String>();
+		animals.add("Fox");
+		animals.add("Cat");
+		animals.add("Dog");
+		animals.add("Rabbit");
+
+		Iterator<String> it = animals.iterator();
+		while(it.hasNext()){
+			String value = it.next();
+			System.out.println(value);
+		}
+	}
+}
+
+#Aquí, el bucle while determina si el iterador tiene elementos adicionales, imprime el valor del elemento y avanza el iterador al siguiente.
+

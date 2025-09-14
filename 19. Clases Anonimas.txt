@@ -1,0 +1,77 @@
+#Las clases anónimas son una forma de extender las clases existentes sobre la marcha.
+
+Por ejemplo, considera tener una clase Machine:
+
+Ejemplo:
+
+class Machine {
+  public void start() {
+    System.out.println("Starting...");
+  }
+}
+
+#Al crear el objeto Machine, podemos cambiar el método start sobre la marcha.
+
+Ejemplo:
+
+class Machine{
+	public void star(){
+		System.out.println("Starting....");
+	}
+}
+
+class program{
+	public static void main(String[] arg){
+		machine m= new machine(){
+			@override public void start(){
+				System.out.println("Wooooooow");
+			}
+		};
+		m.start();
+	}
+}
+
+#Después de la llamada al constructor, hemos abierto las llaves y hemos sobrescrito la implementación del método start sobre la marcha.
+
+--
+
+#La modificación es aplicable solo al objeto actual, y no a la clase en sí. Entonces, si creamos otro objeto de esa clase, la implementación del método start será la definida en la clase.
+
+class machine{
+	public void start(){
+		System.out.println("Starting....");
+	}
+}
+
+class program{
+	public static void main(String[] arg){
+		machine m1= new machine(){
+			@overdrive public void start(){
+				System.out.println("Wooooow");
+			}
+		};
+		machine m2 = new machine();
+		m2.start();
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

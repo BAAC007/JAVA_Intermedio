@@ -1,0 +1,80 @@
+#La herencia es el proceso que permite a una clase adquirir las propiedades (métodos y variables) de otra. Con la herencia, la información se coloca en un orden jerárquico más manejable.
+
+La clase que hereda las propiedades de otra es la subclase (también llamada clase derivada, o clase hija); la clase cuyas propiedades son heredadas es la superclase (clase base, o clase padre).
+
+Para heredar de una clase, usa la palabra clave extends .
+
+Este ejemplo muestra cómo hacer que la clase Dog herede de la clase Animal.
+
+Ejemplo:
+
+class Dog [b]extends[/b] Animal {
+ // some code
+}
+
+#Cuando una clase se hereda de otra clase, hereda todas las variables y métodos no privados de la superclase.
+
+Ejemplo:
+
+class Animal {
+  protected int legs;
+  public void eat() {
+    System.out.println("Animal eats");
+  }
+}
+
+class Dog [b]extends [/b]Animal {
+  Dog() {
+    legs = 4;
+  }
+}
+
+#Como puedes ver, la clase Dog hereda la variable legs de la clase Animal.
+
+Ahora podemos declarar un objeto Dog y llamar al método eat de su superclase:
+
+class Animal{
+	protected int legs;
+	public void eat() {
+		System.out.println("Animal eats");
+	}
+}
+
+class Dog extends Animal{
+	Dog() {
+		legs = 4;
+	}
+}
+
+class MyClass{
+	public static void main(String[] args){
+		Dog d = new Dog();
+		d.eat();
+	}
+}
+
+ 
+#Los constructores no son métodos de miembros, y por lo tanto no son heredados por las subclases.
+
+Sin embargo, el constructor de la superclase se llama cuando se instancia la subclase.
+
+Ejemplo:
+
+class A{
+	public A(){
+		System.out.prinln("New A");
+	}
+}
+
+class B extends A{
+	public B(){
+		System.out.println("New B");
+	}
+}
+
+class Program{
+	public static void main(String[] args){
+		B obj = new B();
+	}
+}
+

@@ -1,0 +1,53 @@
+#Para la manipulación de datos en diferentes tipos de colecciones, la API de Java proporciona una clase <b>Collections </b>, que está incluida en el paquete java.util.
+
+Uno de los métodos de la clase <b>Collections </b> más populares es <b>sort()</b>, que ordena los elementos de tu tipo de colección. Los métodos en la clase Collections son estáticos, por lo que no necesitas un objeto Collections para llamarlos.
+
+Ejemplo:
+
+import java-util.ArryList;
+import java.util.Collections;
+
+public class MyClass{
+	public static void main(String[] args){
+		ArrayList<String> animals = ArrayList<String>();
+		animals.add("Tiger");
+		animals.add("Cat");
+		animals.add("Snake");
+		animals.add("Dog");
+
+		Collections.sort(animals);
+
+		System.out.println(animals);
+
+	}
+}
+
+#Puedes llamar a los métodos <b>sort()</b> en diferentes tipos de Listas, como los Enteros.
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class MyCode{
+	public static void main(String[] args){
+		ArrayList<Integer> nums = new ArrayList<Integer>();
+		nums.add(3);
+		nums.add(36);
+		nums.add(73);
+		nums.add(40);
+		nums.add(1);
+		
+		Collections.sort(nums);
+		System.out.println(nums);
+	}
+}
+
+#Otros métodos útiles en la clase <b>Collections </b>:
+
+<b>max(Collection c):</b> Devuelve el elemento máximo en c según el orden natural.
+
+<b>min(Collection c):</b> Devuelve el elemento mínimo en c según el orden natural.
+
+<b>reverse(List list):</b> Invierte la secuencia en la lista.
+
+<b>shuffle(List list):</b> Mezcla (es decir, aleatoriza) los elementos en la lista.
+

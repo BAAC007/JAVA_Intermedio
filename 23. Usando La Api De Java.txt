@@ -1,0 +1,16 @@
+#La API de Java es una colección de clases e interfaces que han sido escritas para que las uses.
+
+La Documentación de la API de Java con todas las APIs disponibles se puede encontrar en el sitio web de Oracle en 
+
+http://docs.oracle.com/javase/7/docs/api/
+
+Una vez que localices el paquete que quieres usar, necesitas importarlo en tu código.
+
+El paquete se puede importar usando la palabra clave import.
+
+Por ejemplo:
+
+import java.awt.*;
+
+#El paquete awt contiene todas las clases para crear interfaces de usuario y para pintar gráficos e imágenes.
+

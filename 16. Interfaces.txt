@@ -1,0 +1,51 @@
+# Una interface es una clase completamente abstracta que contiene solo métodos abstractos.
+
+Algunas especificaciones para las interfaces:
+
+- Se define utilizando la palabra clave interface.
+
+- Puede contener solo variables estáticas finales.
+
+- No puede contener un constructor porque las interfaces no pueden ser instanciadas.
+
+- Las interfaces pueden extender otras interfaces.
+
+- Una clase puede implementar cualquier cantidad de interfaces.
+
+Un ejemplo de una interfaz simple:
+
+interface Animal {
+  public void eat();
+  public void makeSound();
+}
+
+# Las interfaces tienen las siguientes propiedades:
+
+- Una interfaz es implícitamente abstracta. No es necesario usar la palabra clave abstract al declarar una interfaz.
+
+- Cada método en una interfaz también es implícitamente abstracto, por lo que no se necesita la palabra clave abstract.
+
+- Los métodos en una interfaz son implícitamente públicos.
+
+# Use la palabra clave implements para usar una interfaz con su clase.
+
+interface Animal {
+  public void eat();
+  public void makeSound();
+}
+
+class Cat implements Animal{
+	public void makeSound(){
+		System.out.println("Meow");
+	}
+	public void eat(){
+		System.out.println("omnomnom");
+	}
+}
+
+public class MyClass{
+	public static void main(String[] args){
+		Cat c = new Cat();
+		c.eat();
+	}
+}

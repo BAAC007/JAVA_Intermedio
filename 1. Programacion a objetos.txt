@@ -1,0 +1,16 @@
+#Java utiliza la Programación Orientada a Objetos (POO), un estilo de programación que tiene como objetivo hacer que pensar en programación sea más similar a pensar en el mundo real.
+
+En POO, cada objeto es una unidad independiente con una identidad única, al igual que los objetos en el mundo real.
+
+public class Animal{
+	void bark(){
+	  System.out.println("Woof-Woof");
+	}
+}
+
+class myclas{
+	public static void main(String[] args){
+		Animal dog = new Animal();
+		dog.bark();
+	}
+}

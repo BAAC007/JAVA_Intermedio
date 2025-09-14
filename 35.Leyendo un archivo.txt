@@ -1,0 +1,36 @@
+#Los archivos son útiles para almacenar y recuperar datos, y hay varias formas de leer un archivo.
+
+ Una de las formas más simples es usar la clase <b>Scanner </b> del paquete java.util .
+
+El constructor de la clase <b>Scanner </b> puede recibir un objeto File como entrada.
+
+Para leer el contenido de un archivo de texto en la ruta "C:\\sololearn\\test.txt", tendríamos que crear un objeto File con la ruta correspondiente y pasarlo al objeto Scanner.
+
+try {
+  File x = new File("C:\\sololearn\\test.txt");
+  Scanner sc = new Scanner(x);      
+}
+ catch (FileNotFoundException e) {
+
+}
+
+#Rodeamos el código con un bloque try/catch, porque existe la posibilidad de que el archivo no exista.
+
+#La clase <b>Scanner </b> hereda de <b>Iterator</b>, por lo que se comporta como uno.
+
+Podemos usar el método <b>next()</b> del objeto Scanner para leer el contenido del archivo.
+
+try {
+  File x = new File("C:\\sololearn\\test.txt");
+  Scanner sc = new Scanner(x);
+  while(sc.hasNext()) {
+    System.out.println(sc.next());
+  }
+  sc.close();
+} catch (FileNotFoundException e) {
+  System.out.println("Error");
+}
+
+#El contenido del archivo se muestra palabra por palabra, porque el método <b>next()</b> devuelve cada palabra por separado.
+
+#Siempre es una buena práctica cerrar un archivo cuando se termina de trabajar con él. Una forma de hacer esto es utilizar el método <b>close()</b> de la clase Scanner.

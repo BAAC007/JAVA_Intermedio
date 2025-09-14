@@ -1,0 +1,111 @@
+#Comparando Objetos
+
+#Recuerda que cuando creas objetos, las variables almacenan referencias a los objetos.
+Por lo tanto, cuando comparas objetos usando el operador de prueba de igualdad (==), en realidad compara las referencias y no los valores del objeto.
+
+Ejemplo:
+
+class Animal{
+	String name;
+	Animal (String n){
+		name=n;
+	}
+}
+
+class Myclass{
+	public static void main(String [] args){
+		Animal A1 = new Animal("Robby");
+		Animal A2 = new Animal("Robby");
+		System.out.println(A1==A2);
+	}
+} 
+
+
+#equals()
+
+#Cada objeto tiene un método predefinido equals() que se utiliza para pruebas de igualdad semántica.
+
+Pero, para que funcione con nuestras clases, necesitamos sobrescribirlo y comprobar las condiciones que necesitamos.
+
+Existe una forma simple y rápida de generar el método equals(), aparte de escribirlo manualmente.
+
+Simplemente haz clic derecho en tu clase, ve a Source->Generate hashCode() and equals()... 
+
+Esto creará automáticamente los métodos necesarios.
+
+class Animal {
+  String name;
+  Animal(String n) {
+    name = n;
+  }
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + ((name == null) ? 0 : name.hashCode());
+    return result;
+  }
+  @Override
+  public boolean [b]equals[/b](Object obj) {
+    if (this == obj)
+      return true;
+    if (obj == null)
+      return false;
+    if (getClass() != obj.getClass())
+      return false;
+    Animal other = (Animal) obj;
+    if (name == null) {
+      if (other.name != null)
+        return false;
+    } else if (!name.equals(other.name))
+      return false;
+    return true;
+  }
+}
+
+
+
+#El método hashCode() generado automáticamente se usa para determinar dónde almacenar el objeto internamente. Siempre que implementes equals, DEBES implementar también hashCode.
+
+Podemos ejecutar la prueba nuevamente, utilizando el método equals :
+
+
+class Animal {
+  String name;
+  Animal(String n) {
+    name = n;
+  }
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + ((name == null) ? 0 : name.hashCode());
+    return result;
+  }
+  @Override
+  public boolean [b]equals[/b](Object obj) {
+    if (this == obj)
+      return true;
+    if (obj == null)
+      return false;
+    if (getClass() != obj.getClass())
+      return false;
+    Animal other = (Animal) obj;
+    if (name == null) {
+      if (other.name != null)
+        return false;
+    } else if (!name.equals(other.name))
+      return false;
+    return true;
+  }
+}
+
+class Myclass{
+	public static void main(String [] args){
+		Animal A1 = new Animal("Robby");
+		Animal A2 = new Animal("Robby");
+		System.out.println(A1==A2);
+	}
+} 
+
+
