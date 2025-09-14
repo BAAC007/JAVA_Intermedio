@@ -1,0 +1,26 @@
+#Hay dos tipos de excepciones, verificadas y no verificadas (también llamadas de tiempo de ejecución). La principal diferencia es que las excepciones verificadas se comprueban al compilar, mientras que las excepciones no verificadas se comprueban en tiempo de ejecución.
+
+#Como se mencionó en nuestra lección anterior, Thread.sleep() lanza una InterruptedException. Este es un ejemplo de una excepción verificada. Tu código no se compilará hasta que hayas manejado la excepción.
+
+Ejemplo:
+
+public class MyClass {
+  public static void main(String[ ] args) {
+    try {
+      Thread.sleep(1000);
+    } catch (InterruptedException e) {
+      //some code
+    }
+  }
+}
+
+#Hemos visto ejemplos de excepciones no comprobadas, las cuales se comprueban en tiempo de ejecución, en lecciones anteriores.
+
+Ejemplo (al intentar dividir por 0):
+
+public class MyClass{
+	public static void main(String[] args){
+		int value = 7;
+		value = value / 0;
+	}
+}

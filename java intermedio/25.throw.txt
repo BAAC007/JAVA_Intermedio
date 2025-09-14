@@ -1,0 +1,39 @@
+#La palabra clave <b>throw</b> te permite generar excepciones manualmente desde tus métodos. Algunos de los numerosos tipos de excepciones disponibles incluyen IndexOutOfBoundsException, IllegalArgumentException, ArithmeticException, y así sucesivamente.
+
+Por ejemplo, podemos lanzar una ArithmeticException en nuestro método cuando el parámetro es 0.
+
+public class Program{
+	static int div(int a, int b) throws ArithmeticException {
+		if(b == 0){
+			throw new ArithmeticException ("Division by zero");
+		}else{
+			return a/b;
+		}
+	}
+	
+	public static void main(String[] args){
+		System.out.println(div(42,0));
+	}
+}
+
+#La declaración <b>throws </b> en la definición del método define el tipo de Excepción(es) que el método puede lanzar.
+
+A continuación, la palabra clave <b>throw </b> lanza la excepción correspondiente, junto con un mensaje personalizado.
+
+Si llamamos al método div con el segundo parámetro igual a 0, lanzará una ArithmeticException con el mensaje "División por Cero".
+
+#Manejo de Excepciones
+Un solo bloque try puede contener múltiples bloques catch que manejan diferentes excepciones por separado.
+
+Ejemplo:
+
+try {
+  //some code
+} catch (ExceptionType1 e1) {
+  //Catch block
+} catch (ExceptionType2 e2) {
+  //Catch block
+} catch (ExceptionType3 e3) {
+  //Catch block
+}
+

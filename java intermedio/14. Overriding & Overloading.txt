@@ -1,0 +1,95 @@
+#Como vimos en la lección anterior, una subclase puede definir un comportamiento que es específico para el tipo de subclase, lo que significa que una subclase puede implementar un método de la clase padre basado en su requerimiento.
+
+Esta característica es conocida como sobrescritura de métodos.
+
+Ejemplo:
+
+class Animal
+	public void makeSound(){
+		System.out.println("Grr...");
+	}
+}
+
+class Dog extends Animal{
+	public void makeSound(){
+		System.out.println("Wof..");
+	}
+}
+
+class Cat extends Animal{
+	public void makeSound(){
+		System.out.println("Miau...");
+	}
+}
+
+class program{
+	public static void main (String[] args){
+		Dog d = new Dog();
+		d.makesound();
+	}
+}
+
+#En el código anterior, la clase Cat sobrescribe el método makeSound() de su superclase Animal.
+
+Reglas para la Sobrescritura de Métodos:
+
+- Debe tener el mismo tipo de retorno y argumentos
+
+- El nivel de acceso no puede ser más restrictivo que el nivel de acceso del método sobrescrito (Ejemplo: Si el método de la superclase es declarado como público, el método de sobrescritura en la subclase no puede ser ni privado ni protegido)
+
+- Un método declarado final o static no puede ser sobrescrito
+
+- Si un método no puede ser heredado, no puede ser sobrescrito
+
+- Los constructores no pueden ser sobrescritos
+
+# Cuando los métodos tienen el mismo nombre, pero diferentes parámetros, se conoce como sobrecarga de métodos.
+
+Esto puede ser muy útil cuando necesitas la misma funcionalidad del método para diferentes tipos de parámetros.
+
+El siguiente ejemplo ilustra un método que devuelve el máximo de sus dos parámetros.
+
+Ejemplo:
+
+int max(int a, int b) {
+  if(a > b) {
+    return a;
+  }
+  else {
+    return b;
+  }
+}
+
+# El método mostrado arriba solo funcionará para parámetros de tipo integer.
+
+Sin embargo, es posible que queramos usarlo también para doubles. Para eso, necesitas sobrecargar el método max:
+
+class Program{
+	static double max(double a, double b){
+		if(a > b){
+			return a;
+		}
+		else{
+			return b;
+		}
+	}
+	static int max(int a, int b){
+		if(a > b){
+			return a;
+		}
+		else{
+			return b;
+		}
+	}
+
+	public static void main(String[] args){
+		System.out.println(max(8, 17));
+		System.out.println(max(3.14, 7.68));
+	}
+}
+
+# Ahora, nuestro método max también funcionará con doubles.
+
+Un método sobrecargado debe tener una lista de argumentos diferente; los parámetros deben diferir en su tipo, número, o ambos.
+
+

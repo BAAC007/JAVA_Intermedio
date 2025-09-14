@@ -1,0 +1,78 @@
+# Los tipos de valores son los tipos básicos, e incluyen byte, short, int, long, float, double, boolean, y char.
+
+Estos tipos de datos almacenan los valores asignados a ellos en las ubicaciones de memoria correspondientes.
+
+Entonces, cuando los pasas a un método, básicamente operas en el valor de la variable, en lugar de en la variable misma.
+
+Ejemplo:
+
+public class MyClass{
+	public static void main(String[] args){
+		int x = 5;
+		addOneTo(x);
+		System.out.println(x);
+	}
+	
+	static void addOneTo(int num){
+		num = num + 1;
+	}
+}
+
+#tipos de referencia
+
+
+Un tipo de referencia almacena una referencia (o dirección) a la ubicación de memoria donde se almacenan los datos correspondientes.
+
+Cuando creas un objeto usando el constructor, creas una variable de referencia.
+
+Por ejemplo, considera tener una clase Persona definida:
+
+
+public class MyClass{
+	public static void main(String[] args){
+		Person j;
+		j = new Person("John");
+		j.setAge(20);
+		celebrateBirthday(j);
+		System.out.println(j.getAge());
+	}
+	
+	static void celebrateBirthday(Person p){
+		p.setAge(p.getAge() + 1);
+	}
+}
+
+class Person{
+	private String name;
+	private int age;
+
+	Person(String n) {
+		this.name = n;
+	}
+	
+	public int getAge(){
+		return age;
+	}
+	
+	public void setAge(int a){
+		this.age = a;
+	}
+}
+
+
+#El método celebrateBirthday toma un objeto Persona como su parámetro, e incrementa su atributo.
+
+Debido a que j es un tipo de referencia, el método afecta al objeto en sí, y es capaz de cambiar el valor real de su atributo.
+
+
+
+
+
+
+
+
+
+
+
+
+

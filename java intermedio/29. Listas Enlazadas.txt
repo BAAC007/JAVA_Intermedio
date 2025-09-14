@@ -1,0 +1,46 @@
+#El LinkedList es muy similar en sintaxis a la ArrayList.
+
+Puedes cambiar fácilmente un ArrayList a un LinkedList cambiando el tipo de objeto.
+
+Ejemplo:
+
+import java.util.LinkedList;
+
+public class MyClass{
+	public static void main(String[] args){
+		LinkedList<String> c = new LinkedList<String>();
+		c.add("Red");
+		c.add("Blue");
+		c.add("Green");
+		c.add("Orange");
+		c.remove("Green");
+		System.out.println(c);
+	}
+}
+
+#La diferencia más notable entre el LinkedList y el ArrayList es en la forma en que almacenan objetos.
+
+El ArrayList es mejor para almacenar y acceder a los datos, ya que es muy similar a un array normal.
+
+El LinkedList es mejor para manipular datos, como hacer numerosas inserciones y eliminaciones.
+
+Además de almacenar el objeto, el LinkedList almacena la dirección de memoria (o enlace) del elemento que le sigue. Se llama LinkedList porque cada elemento contiene un enlace al elemento vecino.
+
+12()--> 99()--> 37()--> X
+
+import java.util.ArrayList;
+
+public class MyClass{
+	public static void main(String[] args){
+		ArrayList <String> colors = new ArrayList<String>();
+		colors.add("Red");
+		colors.add("Blue");
+		colors.add("Green");
+		colors.add("Orange");
+		colors.remove("Green");
+
+		for(String s: colors){
+			System.out.println(s);
+		}
+	}
+}

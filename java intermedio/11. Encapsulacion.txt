@@ -1,0 +1,19 @@
+#Hay 4 conceptos fundamentales en la OOP: encapsulación, herencia, polimorfismo y abstracción.
+
+La idea detrás de la encapsulación es asegurar que los detalles de implementación no sean visibles para los usuarios. Las variables de una clase estarán ocultas para las otras clases, accesibles solo a través de los métodos de la clase actual. Esto se llama ocultación de datos.
+
+Para lograr la encapsulación en Java, declara las variables de la clase como privadas y proporciona métodos setter y getter públicos para modificar y ver los valores de las variables.
+
+Por ejemplo:
+
+class BankAccount {
+  private double balance=0;
+  public void deposit(double x) {
+    if(x > 0) {
+      balance += x;
+    }
+  }
+}
+
+#Esta implementación oculta la variable balance , permitiendo el acceso a ella solo a través del método deposit , que valida la cantidad a depositar antes de modificar la variable.
+

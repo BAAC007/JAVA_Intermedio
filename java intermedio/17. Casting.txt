@@ -1,0 +1,16 @@
+# Asignar un valor de un tipo a una variable de otro tipo se conoce como Conversión de Tipo.
+
+Para convertir un valor a un tipo específico, coloque el tipo entre paréntesis y colóquelo frente al valor.
+
+Ejemplo:
+
+public class Program{
+	public static void main(String[] args){
+		double a = 42.571;
+		int b = (int) a;
+		System.out.println(b);
+	}
+}
+
+El código de arriba está convirtiendo el valor 3.14 a un entero, con 3 como el valor resultante.
+
