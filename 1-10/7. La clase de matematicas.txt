@@ -1,0 +1,73 @@
+# El JDK define una serie de clases útiles, una de ellas es la clase Math , que proporciona métodos predefinidos para operaciones matemáticas.
+
+No necesitas crear un objeto de la clase Math para usarla. Para acceder a ella, solo escribe Math. y el método correspondiente.
+
+Math.abs() devuelve el valor absoluto de su parámetro.
+
+ejemplo:
+
+public class Program{
+	public static void main(String[] args){
+		int a = Math.abs(10);
+		System.out.println(a);
+
+		int b = Math.aps(-20);
+		System.out.println(b);
+	}
+}
+
+# Math.ceil() redondea un valor de punto flotante al valor entero más cercano. El valor redondeado se devuelve como un double.
+
+ejemplo:
+
+public class Program{
+	public static void main(String[] args){
+		double c = Math.ceil(7.342);
+		System.out.println(c)
+	}
+}
+
+# De manera similar, Math.floor() redondea un valor de punto flotante hacia abajo al valor entero más cercano.
+
+ejemplo:
+
+public class Program{
+	public static void main (String[] args){
+		double f = Math.floor(7.343);
+		Sytem.out.println(f);
+	}
+}
+
+# Math.max() devuelve el más grande de sus parámetros.
+
+ejemplo:
+
+public class Program{
+	public static void main(String[] args){
+		int m = Math.max(10, 20);
+		System.out.println(m);
+	}
+}
+
+# Por otro lado, Math.min() devuelve el parámetro más pequeño.
+
+ejemplo:
+
+public class Program{
+	public static void main(String[] args){
+		int m = Math.min(10, 20);
+		System.out.println(m);
+	}
+}
+
+# Math.pow() toma dos parámetros y devuelve el primer parámetro elevado a la potencia del segundo parámetro.
+
+ejemplo:
+
+public class Program{
+	public static void main(String[] args);
+		int p = Math.pow(2, 3);
+		System.out.println(p);
+	}
+}
+
